@@ -1,0 +1,3 @@
+include ':statusSwitcher'
+include ':app'
+rootProject.name = "StatusSwitcher"
