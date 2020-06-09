@@ -5,10 +5,11 @@ import android.view.View
 import com.jplus.statusswitcher.base.BaseStatus
 
 /**
+ * 原始布局
  * @author JPlus
  * @date 2020/6/8.
  */
-class OriginalStatus(private val mContentView: View?, private val mContext: Context):BaseStatus(mContentView, mContext) {
+class OriginalStatus (private val mContext: Context,private val mContentView: View?, private var bindListener:((View?)->Unit)?):BaseStatus(mContext, mContentView, bindListener) {
 
     override fun onCreateViewRes(): Int? {
         return null
@@ -17,4 +18,7 @@ class OriginalStatus(private val mContentView: View?, private val mContext: Cont
     override fun buildView(): View? {
         return null
     }
+
+
+
 }
